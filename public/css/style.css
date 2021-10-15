@@ -1,0 +1,315 @@
+body {
+  background-color: #e5e5e5;
+}
+
+.jumbotron-home {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("jumbotron.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("jumbotron.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  width: 100px;
+  color: white;
+  background-color: #fdb414;
+}
+
+.btn:hover {
+  border-color: #eba50d;
+  background-color: #eba50d;
+}
+
+.navbar .btn-login {
+  background: transparent;
+  border-color: white;
+}
+
+.navbar .btn-login:hover {
+  background-color: #fdb414;
+  border-color: #fdb414;
+}
+
+.navbar .btn-register {
+  background-color: #fdb414;
+  border-color: #fdb414;
+}
+
+.navbar .btn-register:hover {
+  background: transparent;
+  border-color: white;
+}
+
+.jumbotron-headline {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding-top: 50px;
+}
+
+.jumbotron-headline h1 {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.jumbotron-headline h2 {
+  font-weight: 400;
+  font-size: 64px;
+}
+
+.jumbotron-searchbar {
+  padding-top: 50px;
+}
+
+.jumbotron-searchbar p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.jumbotron-searchbar .btn-search {
+  border-color: #fdb414;
+}
+
+.jumbotron-searchbar .btn-search:hover {
+  border-color: #eba50d;
+  background-color: #eba50d;
+}
+
+.feature {
+  padding-top: 50px;
+}
+
+.feature .card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.feature .card-body {
+  padding: 25px 25px 20px 25px;
+}
+
+.feature img {
+  max-width: 70px;
+}
+
+.feature h5 {
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.feature p {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  color: #878787;
+  margin-top: auto;
+}
+
+.paket {
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.paket a {
+  text-decoration: none;
+}
+
+.paket h2 {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-align: center;
+  font-weight: 400;
+  font-size: 48px;
+}
+
+.paket .card h5 {
+  font-family: "Nunito", sans-serif;
+  color: black;
+  font-size: 24px;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.paket .card h6 {
+  font-family: "Nunito", sans-serif;
+  color: #eba50d;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.paket .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #fdb31421;
+}
+
+.paket .card img {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+footer {
+  background-color: #fdb414;
+  bottom: 0;
+  min-height: 40px;
+}
+
+footer p {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.login-form {
+  max-width: 400px;
+}
+
+.login-form h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-form .form-label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+/* Style produk.html */
+.produk-quantity .value-quantity {
+  max-width: 50px;
+  text-align: center;
+  background: none;
+  border: none;
+}
+
+.produk-quantity .btn-quantity {
+  height: 40px;
+  width: 50px;
+}
+
+.halaman-produk {
+  font-family: "Nunito", sans-serif;
+  margin-top: 10px;
+}
+
+.halaman-produk h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.halaman-produk h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #878787;
+}
+
+.halaman-produk h3 {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.halaman-produk h4 {
+  color: #878787;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.halaman-produk h5 {
+  color: #fdb414;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.halaman-produk h5 span {
+  color: black;
+}
+
+.halaman-produk p {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.halaman-produk .container {
+  margin-bottom: 50px;
+}
+
+.halaman-produk .btn-book {
+  border: none;
+  width: 200px;
+  height: 50px;
+}
+
+/* Style Profile.html */
+.profile-card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.profile-card .profile-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-card .profile-info .profile-details {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-card .profile-info img {
+  width: 30px;
+  height: 30px;
+}
+
+.profile-card .profile-info h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.profile-card .profile-info h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.profile-card .profile-info h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: #878787;
+  font-weight: 400;
+}
+
+.profile-card .profile-photo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-card .profile-photo img {
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+.profile-card .profile-photo .btn-profile {
+  width: auto;
+}
+
+/*Style Halaman Admin*/
+.sidebar-admin {
+  background-color: #eba50d;
+}
+/*# sourceMappingURL=style.css.map */
