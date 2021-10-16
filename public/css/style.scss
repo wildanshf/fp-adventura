@@ -25,14 +25,6 @@ body {
 
 .navbar {
     .btn-login {
-        background: transparent;
-        border-color: white;
-        &:hover {
-            background-color: #fdb414;
-            border-color: #fdb414;
-        }
-    }
-    .btn-register {
         background-color: #fdb414;
         border-color: #fdb414;
         &:hover {
@@ -157,6 +149,12 @@ footer {
         font-family: "Nunito", sans-serif;
         font-weight: 600;
         text-align: center;
+    }
+    p {
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 5px;
     }
     .form-label {
         font-family: "Nunito", sans-serif;

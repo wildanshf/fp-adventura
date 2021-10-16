@@ -127,70 +127,23 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="row mt-2" id="comment">
-            <div class="co-2">
-                <div class="container">
-                    <img src="Images/logo.svg" alt="">
-                </div>
-            </div>
-            <div class="social-profile-bg rounded-pill">
-                <p>Iqbal CJR</p>
-            </div>
-            <div class="rounded-pill d-flex justify-content-center align-items mt-3 ml-3">
-                <div class="col">
-                    kak ini boleh ditambahin bawang bombay ga ya biar lebih mantap?
-                </div>
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="co-2">
-                <div class="container">
-                    <img src="Images/logo.svg" alt="">
-                </div>
-            </div>
-            <div class="social-profile-bg rounded-pill">
-                <p>Lisa Blackpinks</p>
-            </div>
-            <div class="rounded-pill d-flex justify-content-center mt-3 ml-3">
-                Boleh kak gaskeeen
-            </div>
-        </div>
-        <div class="row mt-2">
-            <div class="co-2">
-                <div class="container">
-                    <img src="Images/logo.svg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <form action="" class="mt-3">
-                    <div class="form-group col-12">
-                        <input type="Text" placeholder="Add a comment as chesianatalia..." class="form-control" />
-                    </div>
-                    <div class="col-lg-3 col-sm-5 button-search">
-                        <a href="#" class="btn btn_warna btn-block mt-3 btn">
-                            Comment
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div> --}}
-    @endsection
+    </div>
+@endsection
 
-    <script>
-        function up(max) {
-            document.getElementById("myNumber").value =
-                parseInt(document.getElementById("myNumber").value) + 1;
-            if (document.getElementById("myNumber").value >= parseInt(max)) {
-                document.getElementById("myNumber").value = max;
-            }
+<script>
+    function up(max) {
+        document.getElementById("myNumber").value =
+            parseInt(document.getElementById("myNumber").value) + 1;
+        if (document.getElementById("myNumber").value >= parseInt(max)) {
+            document.getElementById("myNumber").value = max;
         }
+    }
 
-        function down(min) {
-            document.getElementById("myNumber").value =
-                parseInt(document.getElementById("myNumber").value) - 1;
-            if (document.getElementById("myNumber").value <= parseInt(min)) {
-                document.getElementById("myNumber").value = min;
-            }
+    function down(min) {
+        document.getElementById("myNumber").value =
+            parseInt(document.getElementById("myNumber").value) - 1;
+        if (document.getElementById("myNumber").value <= parseInt(min)) {
+            document.getElementById("myNumber").value = min;
         }
-    </script>
+    }
+</script>

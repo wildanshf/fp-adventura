@@ -24,21 +24,11 @@ body {
 }
 
 .navbar .btn-login {
-  background: transparent;
-  border-color: white;
+  background-color: #fdb414;
+  border-color: #fdb414;
 }
 
 .navbar .btn-login:hover {
-  background-color: #fdb414;
-  border-color: #fdb414;
-}
-
-.navbar .btn-register {
-  background-color: #fdb414;
-  border-color: #fdb414;
-}
-
-.navbar .btn-register:hover {
   background: transparent;
   border-color: white;
 }
@@ -180,6 +170,13 @@ footer p {
   text-align: center;
 }
 
+.login-form p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+
 .login-form .form-label {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
@@ -310,6 +307,6 @@ footer p {
 
 /*Style Halaman Admin*/
 .sidebar-admin {
-  background-color: #eba50d;
+  background-color: #fdb414;
 }
 /*# sourceMappingURL=style.css.map */
