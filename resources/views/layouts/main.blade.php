@@ -26,21 +26,44 @@
                 <a class="navbar-brand" href="/">
                     <img src="frontend/images/logo-adventura.png" alt="" style="padding-top: 20px; max-height: 100px" />
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-2">
-                            <a href="/login">
-                                <button class="btn btn-primary btn-login" type="button">
-                                    Login
-                                </button>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                @auth
+                    <div class="dropdown ms-auto">
+                        <a class="btn btn-secondary dropdown-toggle w-auto ms-auto" href="#" role="button"
+                            id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li>
+                                <form action="/profile" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Profile</button>
+                                </form>
+                            </li>
+                            <li>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-2">
+                                <a href="/login">
+                                    <button class="btn btn-primary btn-login" type="button">
+                                        Login
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                @endauth
             </div>
         </nav>
         @yield('jumbotron-home')

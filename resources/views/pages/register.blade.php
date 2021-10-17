@@ -27,8 +27,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password"
-                    class="form-control @error('password') is-invalid @enderror required value=" {{ old('password') }}""
+                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror required"
                     id="password" />
                 @error('password')
                     <div class="invalid-feedback">
@@ -58,7 +57,7 @@
             </div>
             <div class="ms-auto">
                 <button type="submit" class="w-100 btn btn-primary mb-3">
-                    Submit
+                    Register
                 </button>
             </div>
         </form>
