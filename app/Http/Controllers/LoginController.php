@@ -33,6 +33,16 @@ class LoginController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ]);
 
+        // if (Auth::attempt($credentials)) {
+        //     $request->session()->regenerate();
+
+        //     return redirect()->intended('/');
+        // }
+
+        // return back()->withErrors([
+        //     'email' => 'The provided credentials do not match our records.',
+        // ]);
+
         // $user = User::where('email','=', $request->email)->first();
         // if (!$user){
         //     return back()->with('LoginError', 'Username Cacat!');
