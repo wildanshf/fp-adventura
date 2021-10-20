@@ -9,6 +9,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class TravelPackage extends Model
 {
-    use HasFactory;
-    use SoftDeletes;
+    protected $fillable = [
+        'title',
+        'slug',
+        'tripType',
+        'description',
+        'price',
+        'accomodation',
+        'transportation',
+        'eat',
+        'duration',
+        'dateTrip'
+    ];
+
+    protected $hidden = [
+
+    ];
 }

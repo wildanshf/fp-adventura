@@ -17,14 +17,13 @@ class CreateTravelPackagesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->boolean('tripType');
+            $table->string('tripType');
             $table->longText('description');
             $table->integer('price');
             $table->string('accomodation');
             $table->string('transportation');
             $table->boolean('eat');
-            $table->integer('day');
-            $table->integer('night');
+            $table->string('duration');
             $table->date('dateTrip');
             $table->timestamps();
         });

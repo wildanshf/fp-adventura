@@ -14,7 +14,7 @@ class LoginController extends Controller
     {
         return view('pages.login');
     }
-
+    
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -26,12 +26,13 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/admin');
         }
 
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ]);
+
 
         // if (Auth::attempt($credentials)) {
         //     $request->session()->regenerate();
@@ -66,5 +67,14 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/');
+    }
+
+    protected function redirectTo()
+    {
+        if (Auth::user()->roles == 'ADMIN'){
+            return 'admin';  // admin dashboard path
+        } else {
+            return 'home';  // member dashboard path
+        }
     }
 }
