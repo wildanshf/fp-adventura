@@ -47,7 +47,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('travel-package') }}">
+                <a class="nav-link" href="{{ route('travel-package.index') }}">
                     <i class="fas fa-fw fa-passport"></i>
                     <span>Paket Travel</span></a>
             </li>

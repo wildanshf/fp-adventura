@@ -17,9 +17,8 @@ class TravelPackage extends Model
         'price',
         'accomodation',
         'transportation',
-        'eat',
         'duration',
-        'dateTrip'
+        'tripDate'
     ];
 
     protected $hidden = [

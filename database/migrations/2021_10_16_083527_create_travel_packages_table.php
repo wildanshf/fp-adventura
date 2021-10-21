@@ -22,9 +22,8 @@ class CreateTravelPackagesTable extends Migration
             $table->integer('price');
             $table->string('accomodation');
             $table->string('transportation');
-            $table->boolean('eat');
             $table->string('duration');
-            $table->date('dateTrip');
+            $table->date('tripDate')->nullable();
             $table->timestamps();
         });
     }

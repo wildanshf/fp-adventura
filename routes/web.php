@@ -19,9 +19,19 @@ Route::prefix('admin')
         Route::get('/', [DashboardController::class, 'index'])
             ->name('dashboard');
         
-        // Route::resource('travel-package', TravelPackageController::class);
-        Route::get('travel-package', [TravelPackageController::class, 'index'])
-            ->name('travel-package');
+        Route::resource('travel-package', 'App\Http\Controllers\Admin\TravelPackageController'); 
+        // Route::get('travel-package', [TravelPackageController::class, 'index'])
+        //     ->name('travel-package');
+        // Route::get('travel-package.create', [TravelPackageController::class, 'create'])
+        //     ->name('travel-package.create');
+        // Route::post('travel-package.store', [TravelPackageController::class, 'store'])
+        //     ->name('travel-package.store');
+        // Route::get('travel-package.edit', [TravelPackageController::class, 'edit'])
+        //     ->name('travel-package.edit');
+        // Route::get('travel-package.update', [TravelPackageController::class, 'update'])
+        //     ->name('travel-package.update');
+        // Route::delete('travel-package.destroy', [TravelPackageController::class, 'destroy'])
+        //     ->name('travel-package.destroy');
 });
 
 Route::get('login', [LoginController::class, 'index'])

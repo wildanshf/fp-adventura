@@ -25,15 +25,14 @@ class TravelPackageRequest extends FormRequest
     {
         return [
             'title' => 'required|max:255',
-            'slug' => 'required|max:255',
+            'slug' => 'max:255',
             'tripType' => 'required|max:255',
             'description' => 'required',
             'price' => 'required|integer',
             'accomodation' => 'required|max:255',
             'transportation' => 'required|max:255',
-            'eat' => 'required|boolean',
             'duration' => 'required|max:255',
-            'dateTrip' => 'required|date'
+            'tripDate' => 'required|date'
         ];
     }
 }
