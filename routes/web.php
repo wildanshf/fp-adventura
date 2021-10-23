@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\TravelPackageController;
+use App\Http\Controllers\Admin\GalleryController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -20,6 +21,7 @@ Route::prefix('admin')
             ->name('dashboard');
         
         Route::resource('travel-package', 'App\Http\Controllers\Admin\TravelPackageController'); 
+        Route::resource('gallery', 'App\Http\Controllers\Admin\GalleryController'); 
         // Route::get('travel-package', [TravelPackageController::class, 'index'])
         //     ->name('travel-package');
         // Route::get('travel-package.create', [TravelPackageController::class, 'create'])
@@ -43,4 +45,5 @@ Route::get('register', [RegisterController::class, 'index'])
     ->middleware('guest');
 Route::post('register', [RegisterController::class, 'store']);
 
-Route::post('profile', [ProfileController::class, 'index']);
+Route::post('profile', [ProfileController::class, 'index'])
+    ->middleware('auth');

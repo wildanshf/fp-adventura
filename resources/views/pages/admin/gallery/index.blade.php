@@ -6,10 +6,10 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Paket Travel</h1>
-            <a href="{{ route('travel-package.create') }}" class="btn btn-sm btn-primary shadow-sm">
+            <h1 class="h3 mb-0 text-gray-800">Galeri Travel</h1>
+            <a href="{{ route('gallery.create') }}" class="btn btn-sm btn-primary shadow-sm">
                 <i class="fas fa-plus fa-sm text-white-50"></i>
-                Tambah Paket Travel
+                Tambah Foto
             </a>
         </div>
 
@@ -20,12 +20,8 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Title</th>
-                                <th>Trip Type</th>
-                                <th>Accomodation</th>
-                                <th>Duration</th>
-                                <th>Transportation</th>
-                                <th>Departure Date</th>
+                                <th>Travel</th>
+                                <th>Image</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -33,17 +29,16 @@
                             @forelse ($items as $item)
                                 <tr>
                                     <td>{{ $item->id }}</td>
-                                    <td>{{ $item->title }}</td>
-                                    <td>{{ $item->tripType }}</td>
-                                    <td>{{ $item->accomodation }}</td>
-                                    <td>{{ $item->duration }}</td>
-                                    <td>{{ $item->transportation }}</td>
-                                    <td>{{ $item->tripDate }}</td>
+                                    <td>{{ $item->travel_package->title }}</td>
                                     <td>
-                                        <a href="{{ route('travel-package.edit', $item->id) }}" class="btn btn-info">
+                                        <img src="{{ Storage::url($item->image) }}" alt="" style="width: 150px"
+                                            class="img-thumbnail">
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('gallery.edit', $item->id) }}" class="btn btn-info">
                                             <i class="fa fa-pencil-alt"></i>
                                         </a>
-                                        <form action="{{ route('travel-package.destroy', $item->id) }}" method="POST"
+                                        <form action="{{ route('gallery.destroy', $item->id) }}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('delete')
@@ -55,7 +50,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8" class="text-center">
+                                    <td colspan="7" class="text-center">
                                         Data Kosong
                                     </td>
                                 </tr>
@@ -67,4 +62,6 @@
         </div>
     </div>
     <!-- /.container-fluid -->
+
+
 @endsection
