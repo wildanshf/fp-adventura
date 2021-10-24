@@ -11,8 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+    <!-- XZOOM CSS STYLE-->
+    <link rel="stylesheet" href="{{ url('xzoom/xzoom.css') }}" />
+
     <title>Hello, world!</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ url('css/style.css') }}" />
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
@@ -24,7 +27,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="frontend/images/logo-adventura.png" alt="" style="padding-top: 20px; max-height: 100px" />
+                    <img src="{{ url('frontend/images/logo-adventura.png') }}" alt=""
+                        style="padding-top: 20px; max-height: 100px" />
                 </a>
                 @auth
                     <div class="dropdown ms-auto">
@@ -88,6 +92,22 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- get jQuery from the google apis -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- XZOOM JQUERY PLUGIN  -->
+    <script type="text/javascript" src="{{ url('xzoom/xzoom.min.j') }}s"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 500,
+                title: false,
+                tint: '#333',
+                Xoffset: 5
+            });
+        });
     </script>
 </body>
 
