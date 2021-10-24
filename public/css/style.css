@@ -247,6 +247,23 @@ footer p {
   height: 50px;
 }
 
+.halaman-produk .gallery .xzoom-container {
+  display: block;
+}
+
+.halaman-produk .gallery .xzoom-container .xzoom {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.halaman-produk .gallery .xzoom-container .xactive {
+  border: 4px solid #fdb414;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 /* Style Profile.html */
 .profile-card {
   margin-top: 50px;
