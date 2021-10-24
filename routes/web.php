@@ -9,10 +9,13 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\TravelPackageController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\TransactionController;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])
+    ->name('home');
 
-Route::get('/detail', [DetailController::class, 'index']);
+Route::get('/detail/{slug}', [DetailController::class, 'index'])
+    ->name('detail');
 
 Route::prefix('admin')
     ->middleware(['auth', 'isAdmin'])
@@ -20,20 +23,9 @@ Route::prefix('admin')
         Route::get('/', [DashboardController::class, 'index'])
             ->name('dashboard');
         
-        Route::resource('travel-package', 'App\Http\Controllers\Admin\TravelPackageController'); 
-        Route::resource('gallery', 'App\Http\Controllers\Admin\GalleryController'); 
-        // Route::get('travel-package', [TravelPackageController::class, 'index'])
-        //     ->name('travel-package');
-        // Route::get('travel-package.create', [TravelPackageController::class, 'create'])
-        //     ->name('travel-package.create');
-        // Route::post('travel-package.store', [TravelPackageController::class, 'store'])
-        //     ->name('travel-package.store');
-        // Route::get('travel-package.edit', [TravelPackageController::class, 'edit'])
-        //     ->name('travel-package.edit');
-        // Route::get('travel-package.update', [TravelPackageController::class, 'update'])
-        //     ->name('travel-package.update');
-        // Route::delete('travel-package.destroy', [TravelPackageController::class, 'destroy'])
-        //     ->name('travel-package.destroy');
+        Route::resource('travel-package', TravelPackageController::class); 
+        Route::resource('gallery', GalleryController::class); 
+        Route::resource('transaction', TransactionController::class);
 });
 
 Route::get('login', [LoginController::class, 'index'])
