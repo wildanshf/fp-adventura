@@ -46,14 +46,26 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label class="form-label">Address</label>
-                <input type="text" name="address" class="form-control @error('address') is-invalid @enderror" id="address"
-                    required value="{{ old('address') }}" />
-                @error('address')
+                <label class="form-label">Gender</label>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                </div>
+                @error('gender')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" name="date_of_birth" placeholder="Date of Birth">
             </div>
             <div class="ms-auto">
                 <button type="submit" class="w-100 btn btn-primary mb-3">
