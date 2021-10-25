@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\TravelPackage;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
+use App\Models\Gallery;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -74,18 +75,63 @@ class DatabaseSeeder extends Seeder
             'tripDate' => '2021-10-2',
         ]);
 
-        Transaction::create([ 
+        // Transaction::create([ 
+        //     'travel_packages_id' => 1,
+        //     'users_id' => 2,
+        //     'transaction_total' => 3200000,
+        //     'transaction_status' => 'PENDING'
+        // ]);
+
+        // TransactionDetail::create([ 
+        //     'transactions_id' => 1,
+        //     'username' => 'Wildan Shafa',
+        //     'gender' => 'Male',
+        //     'date_birth' => '2021-10-2'
+        // ]);
+
+        Gallery::create([
             'travel_packages_id' => 1,
-            'users_id' => 2,
-            'transaction_total' => 3200000,
-            'transaction_status' => 'PENDING'
+            'image' => 'assets/gallery/FaJ8WnZOROpiwCSEUGM1alFN7km7cXUp1oUn3281.jpg'
         ]);
 
-        TransactionDetail::create([ 
-            'transactions_id' => 1,
-            'username' => 'Wildan Shafa',
-            'gender' => 'Male',
-            'date_birth' => '2021-10-2'
+        Gallery::create([
+            'travel_packages_id' => 1,
+            'image' => 'assets/gallery/zqMC28fjKsimiAGG7oAlRQSLMJRounsVXkHs6GBa.jpg'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 1,
+            'image' => 'assets/gallery/diIJpjOFsoM3RkWjmGforfWJmf1Ns7augJbQagCR.png'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 2,
+            'image' => 'assets/gallery/4NRA4VMvuDtikrXRnyZbcGcdQXu4dm5EOCYCQeHu.png'
+        ]);
+        
+        Gallery::create([
+            'travel_packages_id' => 2,
+            'image' => 'assets/gallery/y08RRQzfDKe4k2GaVKPkcER62sDdHNjreQkTFyF1.png'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 2,
+            'image' => 'assets/gallery/llMLU56QOUTpv5EdM65fqNRMliyxXYI4zMR81l36.png'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 3,
+            'image' => 'assets/gallery/Wghl4bylFBWI5mYrzkEusiPum82LNegeVJod1pAy.png'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 3,
+            'image' => 'assets/gallery/yHQRIwWCrCVwJSSSZllzLPwEabzOJDAiWuSgGO9U.jpg'
+        ]);
+
+        Gallery::create([
+            'travel_packages_id' => 3,
+            'image' => 'assets/gallery/nsXZhOBjJiiPaUWN35TfQvbr2o7qVBmakzYqDARd.png'
         ]);
     }
 }
