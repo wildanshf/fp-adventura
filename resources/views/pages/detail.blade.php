@@ -51,7 +51,7 @@
                     <h4>Date</h4>
                     <p class="information-details">
                         <img src="{{ url('frontend/images/calendar.png') }}" alt="" />
-                        {{ \Carbon\Carbon::create($items->tripDate)->format('n F Y') }}
+                        {{ Carbon\Carbon::create($items->tripDate)->format('n F Y') }}
                     </p>
                 </div>
             </div>
@@ -70,7 +70,8 @@
                 </div>
                 <div class="col ms-auto">
                     @auth
-                        <form action="" method="POST">
+                        <form action="{{ route('checkout-process', $items->id) }}" method="POST">
+                            @csrf
                             <button class="btn btn-primary btn-book">
                                 Book Now
                             </button>
