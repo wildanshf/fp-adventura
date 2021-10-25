@@ -1,5 +1,6 @@
 body {
   background-color: #e5e5e5;
+  background-size: auto;
 }
 
 .jumbotron-home {
@@ -16,6 +17,7 @@ body {
   width: 100px;
   color: white;
   background-color: #fdb414;
+  border-color: #fdb414;
 }
 
 .btn:hover {
@@ -325,5 +327,147 @@ footer p {
 /*Style Halaman Admin*/
 .sidebar-admin {
   background-color: #fdb414;
+}
+
+.section-details-content .card-details {
+  padding: 30px;
+  border-radius: 11px;
+}
+
+.section-details-content .card-details .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.section-details-content .card-details input::-webkit-input-placeholder {
+  color: black;
+}
+
+.section-details-content .card-details input:-ms-input-placeholder {
+  color: black;
+}
+
+.section-details-content .card-details input::-ms-input-placeholder {
+  color: black;
+}
+
+.section-details-content .card-details input::placeholder {
+  color: black;
+}
+
+.section-details-content .card-details .checkout-informations th {
+  font-weight: 300;
+  font-size: 18px;
+  color: #071c4d;
+}
+
+.section-details-content .card-details .checkout-informations td {
+  font-weight: 300;
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details .checkout-informations .text-blue {
+  color: #071c4d;
+  font-weight: bold;
+}
+
+.section-details-content .card-details .checkout-informations .text-orange {
+  color: #ff9e53;
+  font-weight: bold;
+}
+
+.section-details-content .card-details h1 {
+  font-size: 26px;
+}
+
+.section-details-content .card-details h2 {
+  font-size: 20px;
+}
+
+.section-details-content .card-details p {
+  font-size: 18px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details .payment-instructions {
+  font-weight: 300;
+  font-size: 14px;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-right {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.section-details-content .join-container {
+  margin-top: -16px;
+}
+
+.section-details-content .btn-join-now {
+  background-color: #fdb414;
+  color: #fff;
+  border-radius: 0;
+}
+
+.section-details-content .btn-join-now:hover {
+  color: #fff;
+  background-color: #eba50d;
+}
+
+.section-details-content .bank .bank-item h3 {
+  font-size: 18px;
+  color: #071c4d;
+  margin-bottom: 0;
+}
+
+.section-details-content .bank .bank-item p {
+  margin-bottom: 0;
+}
+
+.section-details-content .bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.section-details-content .bank .bank-item .description p {
+  font-family: Assistant;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: left;
+  color: #071c4d;
+}
+
+.section-details-content .bank .bank-item .bank-image {
+  width: 45px;
+  height: 45px;
+  float: left;
+}
+
+.section-details-content .input-group-text {
+  background-color: transparent;
+}
+
+.section-details-content h3 {
+  font-weight: 400;
+  font-size: 14px;
+  color: #071c4d;
+}
+
+.section-details-content .gj-datepicker .datepicker {
+  border-right: 0;
+}
+
+.section-details-content .gj-datepicker .input-group-append .btn {
+  padding-right: 30px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,6 @@
 body {
     background-color: #e5e5e5;
+    background-size: auto;
 }
 
 .jumbotron-home {
@@ -17,6 +18,7 @@ body {
     width: 100px;
     color: white;
     background-color: #fdb414;
+    border-color: #fdb414;
     &:hover {
         border-color: #eba50d;
         background-color: #eba50d;
@@ -286,4 +288,157 @@ footer {
 /*Style Halaman Admin*/
 .sidebar-admin {
     background-color: #fdb414;
+}
+
+// Sementara
+
+.section-details-content {
+    .card-details {
+        padding: 30px;
+        border-radius: 11px;
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+
+        .checkout-informations {
+            th {
+                font-weight: 300;
+                font-size: 18px;
+                color: #071c4d;
+            }
+
+            td {
+                font-weight: 300;
+                font-size: 18px;
+                color: #b1b1b1;
+            }
+
+            .text-blue {
+                color: #071c4d;
+                font-weight: bold;
+            }
+
+            .text-orange {
+                color: #ff9e53;
+                font-weight: bold;
+            }
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #b1b1b1;
+        }
+
+        .payment-instructions {
+            font-weight: 300;
+            font-size: 14px;
+            color: #b1b1b1;
+        }
+    }
+
+    .card-right {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+    }
+
+    .join-container {
+        margin-top: -16px;
+    }
+
+    .btn-join-now {
+        background-color: #fdb414;
+        color: #fff;
+        border-radius: 0;
+
+        &:hover {
+            color: #fff;
+            background-color: #eba50d;
+        }
+    }
+
+    .bank {
+        .bank-item {
+            h3 {
+                font-size: 18px;
+                color: #071c4d;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+
+            .description {
+                margin-left: 10px;
+                overflow: hidden;
+                float: left;
+
+                p {
+                    font-family: Assistant;
+                    font-weight: normal;
+                    font-size: 16px;
+                    text-align: left;
+                    color: #071c4d;
+                }
+            }
+
+            .bank-image {
+                width: 45px;
+                height: 45px;
+                float: left;
+            }
+        }
+    }
+
+    // .btn-add-now {
+    //     background-color: #071c4d;
+    //     color: #fff;
+
+    //     &:hover {
+    //         color: #fff;
+    //     }
+    // }
+
+    .input-group-text {
+        background-color: transparent;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #071c4d;
+    }
+
+    .gj-datepicker {
+        .datepicker {
+            border-right: 0;
+        }
+
+        .input-group-append {
+            .btn {
+                padding-right: 30px;
+            }
+        }
+    }
 }
