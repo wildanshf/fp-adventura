@@ -10,6 +10,7 @@ class TransactionDetail extends Model
 {
     protected $fillable = [
         'travel_packages_id',
+        'transactions_id',
         'username',
         'gender',
         'date_birth'
