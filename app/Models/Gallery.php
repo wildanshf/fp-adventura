@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Gallery extends Model
 {
+    use HasFactory;
+    use SoftDeletes;
+    
     protected $fillable = [
         'travel_packages_id',
         'image'

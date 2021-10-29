@@ -112,9 +112,10 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gallery $Gallery)
+    public function destroy($id)
     {
-        $Gallery->delete();
+        $item = Gallery::findOrFail($id);
+        $item->delete();
 
         return redirect()->route('gallery.index');
     }

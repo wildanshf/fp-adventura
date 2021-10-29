@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-    <div class="container login-form">
+    <div class="card shadow container login-card my-4" style="padding: 20px; border-radius: 10px;">
         <h1>Register</h1>
         <form action="/register" method="POST">
             @csrf

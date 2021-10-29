@@ -9,6 +9,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\UserTransactionController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\TravelPackageController;
 
@@ -59,5 +60,8 @@ Route::get('register', [RegisterController::class, 'index'])
     ->middleware('guest');
 Route::post('register', [RegisterController::class, 'store']);
 
-Route::post('profile', [ProfileController::class, 'index'])
-    ->middleware('auth');
+
+Route::get('profile', [ProfileController::class, 'index'])
+    ->name('profile');
+Route::get('profile/transaction-detail/{id}', [ProfileController::class, 'show'])
+    ->name('transaction-detail');

@@ -6,7 +6,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Edit Gallery {{ $item->title }}</h1>
+            <h1 class="h3 mb-0 text-gray-800">Edit Gallery {{ $item->travel_package->title }}</h1>
         </div>
 
         @if ($errors->any())
@@ -24,7 +24,7 @@
                 <form action="{{ route('gallery.update', $item->id) }}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="travel_packages_id">Paket Travel</label>
                         <select name="travel_packages_id" required class="form-control">
                             <option value="{{ $item->travel_packages_id }}">Jangan Diubah</option>
@@ -34,7 +34,7 @@
                                 </option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> --}}
                     <div class="form-group">
                         <label for="image"></label>
                         <input type="file" class="form-control" name="image" placeholder="Image">

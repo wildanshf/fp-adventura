@@ -64,11 +64,11 @@
         </div>
         <div class="container produk-price">
             <hr>
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col">
+            <div class="row">
+                <div class="col my-auto">
                     <h5>@currency($items->price),00<span> / Person</span></h5>
                 </div>
-                <div class="col ms-auto">
+                <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
                     @auth
                         <form action="{{ route('checkout-process', $items->id) }}" method="POST">
                             @csrf
@@ -79,7 +79,7 @@
                     @endauth
                     @guest
                         <a href="{{ route('login') }}">
-                            <button type="submit" class="btn btn-primary btn-book ms-auto">
+                            <button type="submit" class="btn btn-primary btn-book">
                                 Book Now
                             </button>
                         </a>

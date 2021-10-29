@@ -30,8 +30,8 @@
                         <img src="frontend/images/icon-phone.svg" alt="icon" />
                     </div>
                     <div class="col-11">
-                        <h2>{{ auth()->user()->phone }}</h2>
-                        <h3>Mobile Phone</h3>
+                        <h2>{{ auth()->user()->gender }}</h2>
+                        <h3>Gender</h3>
                     </div>
                 </div>
                 <div class="row profile-details">
@@ -39,8 +39,8 @@
                         <img src="frontend/images/icon-location.svg" alt="icon" />
                     </div>
                     <div class="col-11">
-                        <h2>{{ auth()->user()->address }}</h2>
-                        <h3>Address</h3>
+                        <h2>{{ Carbon\Carbon::create(auth()->user()->date_of_birth)->format('n F Y') }}</h2>
+                        <h3>Birth Date</h3>
                     </div>
                 </div>
             </div>
@@ -54,6 +54,45 @@
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="card mb-3 mx-auto user-transaction-card" style="max-width: 1000px;">
+        <div class="mx-auto my-3">
+            <h1>Transaction History</h1>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Travel</th>
+                        <th>Trip Date</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse ($items as $item)
+                        <tr>
+                            <td>{{ $item->travel_package->title }}</td>
+                            <td>{{ Carbon\Carbon::create($item->travel_package->tripDate)->format('n F Y') }}</td>
+                            <td>{{ $item->transaction_total }}</td>
+                            <td>{{ $item->transaction_status }}</td>
+                            <td>
+                                <a href="{{ route('transaction-detail', $item->id) }}" class="btn btn-primary">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr>
+                            <td colspan="8" class="text-center">
+                                Data Kosong
+                            </td>
+                        </tr>
+                    @endforelse
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection
